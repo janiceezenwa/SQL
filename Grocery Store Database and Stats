@@ -1,0 +1,16 @@
+CREATE TABLE liquor (id integer primary key, liquor text, cost integer, shots integer, special text); 
+INSERT INTO liquor VALUES(1, "reposado", 20, 15, "no");
+INSERT INTO liquor VALUES (2, "blanco", 15, 15, "yes");
+INSERT INTO liquor VALUES (3, "vodka", 13, 15, "yes");
+INSERT INTO liquor VALUES (4, "bourbon", 14, 15, "yes");
+INSERT INTO liquor VALUES (5, "cognac", 17, 15, "yes");
+INSERT into liquor VALUES (6, "gin", 11, 15, "no");
+
+
+--display the database ordered by cost.
+SELECT * FROM liquor;
+SELECT * FROM liquor ORDER BY cost;
+
+--display the sum amount of shots available in my liquor store.
+SELECT shots, SUM(shots) FROM liquor;
+
